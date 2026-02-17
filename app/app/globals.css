@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-bg-tertiary: #1a1a1a;
+  --color-text: #e5e5e5;
+  --color-text-secondary: #a1a1a1;
+  --color-text-muted: #666666;
+  --color-accent: #00ff88;
+  --color-accent-dim: #00cc6a;
+  --color-border: #333333;
+  --color-border-light: #444444;
+  --color-danger: #ff5555;
+  --color-danger-bg: #1a0a0a;
+  --color-success-bg: #0a1a0f;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background: #0a0a0a;
+  color: #e5e5e5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Wallet adapter overrides */
+.wallet-adapter-button {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.8rem !important;
+  height: 36px !important;
+  border-radius: 4px !important;
+  background-color: #00ff88 !important;
+  color: #0a0a0a !important;
+  font-weight: 600 !important;
+}
+
+.wallet-adapter-button:hover {
+  background-color: #00cc6a !important;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: #00ff88 !important;
+}
+
+.wallet-adapter-modal-wrapper {
+  background-color: #111111 !important;
+  border: 1px solid #00ff88 !important;
+  border-radius: 8px !important;
+}
+
+.wallet-adapter-modal-title {
+  font-family: 'JetBrains Mono', monospace !important;
+  color: #e5e5e5 !important;
+}
+
+.wallet-adapter-modal-list li {
+  background-color: #1a1a1a !important;
+  border-radius: 4px !important;
+}
+
+.wallet-adapter-modal-list li:hover {
+  background-color: #333333 !important;
+}
