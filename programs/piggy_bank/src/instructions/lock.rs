@@ -1,4 +1,5 @@
 use anchor_lang::prelude::*;
+use anchor_lang::solana_program::{program, system_instruction};
 
 use crate::error;
 use crate::state::Lock;
@@ -17,19 +18,16 @@ pub fn lock(ctx: Context<LockCtx>, amt: u64, exp: u64) -> Result<()> {
     lock.dst = ctx.accounts.dst.key();
     lock.exp = exp;
 
-    let ix = anchor_lang::solana_program::system_instruction::transfer(
+    let ix = system_instruction::transfer(
         &ctx.accounts.payer.key(),
         &ctx.accounts.lock.key(),
         amt,
     );
-    anchor_lang::solana_program::program::invoke(
-        &ix,
-        &[
-            ctx.accounts.payer.to_account_info(),
-            ctx.accounts.lock.to_account_info(),
-            ctx.accounts.system_program.to_account_info(),
-        ],
-    )?;
+    program::invoke(&ix, &[
+        ctx.accounts.payer.to_account_info(),
+        ctx.accounts.lock.to_account_info(),
+        ctx.accounts.system_program.to_account_info(),
+    ])?;
 
     Ok(())
 }

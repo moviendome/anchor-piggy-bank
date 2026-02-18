@@ -15,7 +15,7 @@ piggy_bank = "ZaU8j7XCKSxmmkMvg7NnjrLNK6eiLZbHsJQAc2rFzEN"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "~/Cyfrin/wallet.json"
 
 [scripts]
