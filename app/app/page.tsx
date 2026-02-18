@@ -153,7 +153,7 @@ export default function Home() {
               GitHub
             </a>
             <a
-              href="https://moviendo.me/time-locked-sol-savings-with-anchor-building-a-piggy-bank-on-solana"
+              href="https://moviendo.me/a-frontend-for-the-piggy-bank-interacting-with-solana-from-the-browser"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary transition-colors duration-200 hover:text-accent"
